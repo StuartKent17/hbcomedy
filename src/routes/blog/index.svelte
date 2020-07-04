@@ -18,9 +18,9 @@
 </style>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Blog | Hawke's Bay Comedy</title>
 </svelte:head>
-
+<div class="content">
 <h1>Recent posts</h1>
 
 <ul>
@@ -32,3 +32,4 @@
 		<li><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></li>
 	{/each}
 </ul>
+</div>

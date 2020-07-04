@@ -3,7 +3,7 @@
 	.hero {
 		background:url('../cover.jpg');
 background-position: right center;
-		min-height:400px;
+		min-height:600px;
         color:white;
         padding-top:180px;
         padding: 180px 50px 0px 50px;
@@ -11,10 +11,10 @@ background-position: right center;
     }
     
     .logo {
-        max-width:220px;
+        max-width:320px;
     }
 
-    .content {
+    .hero-content {
         display:flex;
         flex-direction: row;        
         font-weight:500;    
@@ -35,10 +35,10 @@ background-position: right center;
     }
 
     .hero strong {
-        font-size: 1.8em;
+        font-size: 2em;
         display:inline-block;
         text-shadow:2px 2px 5px black;
-        max-width:480px;
+        max-width:520px;
         text-align:center;
     }
 
@@ -52,7 +52,7 @@ background-position: right center;
 </style>
 
 <div class="hero">
-<div class="content">
+<div class="hero-content">
 	<img src="logo.png" alt="Hawke's Bay Comedy Logo" class="logo">
     <strong>"Well that was definitely a period of time I'll never get back" <span>
         &mdash;Another Satisfied Patron</span></strong>    

@@ -1,5 +1,6 @@
 <script>
 	import Hero from '../components/Hero.svelte';
+	import UpcomingEvents from '../components/UpcomingEvents.svelte';
 </script>
 
 <style>
@@ -131,10 +132,11 @@
 	</style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Hawke's Bay Comedy</title>
 </svelte:head>
 
 <Hero></Hero>
+<UpcomingEvents></UpcomingEvents>
 
 <figure class="purple-block">
 	<div class="mouth">

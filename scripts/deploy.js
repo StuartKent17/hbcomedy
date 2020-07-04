@@ -1,7 +1,7 @@
 const ghpages = require('gh-pages');
 
 ghpages.publish(
-    '__sapper__/export',
+    '__sapper__/export/hbcomedy',
     {
         branch: 'master',
         repo: 'https://github.com/StuartKent17/hbcomedy.git',
