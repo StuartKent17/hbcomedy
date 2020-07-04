@@ -12,7 +12,7 @@ const contents = JSON.stringify(posts.children.map(post =>{
 		title: post.name,
 		children:  post.children.map(child => {
 			return {
-				path: child.path.replace('static','')
+				path: child.path.replace('static','hbcomedy')
 			}
 		}),
 		slug: post.slug
