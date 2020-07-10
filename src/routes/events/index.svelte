@@ -1,8 +1,6 @@
 <script context="module">
 	import moment from 'moment';
 
-	console.log(moment('2020-07-14'));
-
 	export function preload({ params, query }) {
 		return this.fetch(`events.json`).then(r => r.json()).then(events => {
 			return { events };
@@ -59,7 +57,7 @@
 			<div class="eventchit">
 				
 				<div class="image" 
-					style="background-image: url('/{event.image}')">
+					style="background-image: url('./{event.image}')">
 				</div>
 				<div class="row">
 					<br/>

@@ -10,15 +10,12 @@
 		} else {
 			this.error(res.status, data.message);
 		}
-
-
-		
 	}
 </script>
 
 <script>
 	export let event;
-	import moment from 'moment';
+	import moment from 'moment';	
     import Button from '../../components/Button.svelte';    
 		var newEvents = event.dates.filter(function(date, index, array){
 			if(moment(date.datetime).isAfter(moment())){
@@ -118,7 +115,7 @@
 <svelte:head>
 	<title>{event.title}</title>
 </svelte:head>
-<div class="header_image" style="background-image: url('/{event.event_image}')">
+<div class="header_image" style="background-image: url('./{event.event_image}')">
 
 </div>
 

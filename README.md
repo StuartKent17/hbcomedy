@@ -29,17 +29,7 @@ in line 11 in ```\src\server.js``` you need to comment ```'hbcomedy'``` from the
 			// 'hbcomedy',
 			compression({ threshold:  0 }),
 ```
-  
-****See gallery locally****
-if you wish to see the gallery locally change this line (15)
-``` Javascript
-path: child.path.replace('static','/hbcomedy')
-```
-to
-``` Javascript
- path: child.path.replace('static','')
-```
-  
+   
 
 ***to build/push prod**
 

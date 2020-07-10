@@ -123,7 +123,7 @@
 		<img src="openmic.png" alt="" class="openmic">
 		
 	<div class="events">
-		<a href="/events/napier-standup-comedy">
+		<a href="events/napier-standup-comedy">
 		<div class="event left">
 			<img src="paisley.png" alt="">
 			<div class="details">
@@ -133,7 +133,7 @@
 			</div>
 		</div>
 		</a>
-		<a href="/events/hastings-standup-comedy">
+		<a href="events/hastings-standup-comedy">
 		<div class="event right">
 			<img src="common.png" alt="">
 			<div class="details">
