@@ -1,9 +1,12 @@
-# sapper-template
-
-The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
+# HB-Comedy-template
+Based off the default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
 
 
 ## Getting started
+
+### Hacks / Workarounds
+This project has two workarounds needed for switching between dev / prod
+
 
 
 ### Using `degit`
@@ -17,19 +20,13 @@ npx degit "sveltejs/sapper-template#rollup" my-app
 npx degit "sveltejs/sapper-template#webpack" my-app
 ```
 
-
-### Using GitHub templates
-
-Alternatively, you can use GitHub's template feature with the [sapper-template-rollup](https://github.com/sveltejs/sapper-template-rollup) or [sapper-template-webpack](https://github.com/sveltejs/sapper-template-webpack) repositories.
-
-
 ### Running the project
 
 However you get the code, you can install dependencies and run the project in development mode with:
 
 ```bash
 cd my-app
-npm install # or yarn
+npm install # npm comes with NODE.JS
 npm run dev
 ```
 

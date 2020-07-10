@@ -10,6 +10,7 @@
 <style>
 	.content {
 		margin-top:20px;
+		padding:20px;
 	}
 	.headerImage {
 		width:100%;
@@ -25,10 +26,10 @@
 		justify-content: space-evenly;
 	}
 
-	.people.small Person {
-		max-width: 30%;
+	.person {
+		flex: 1 0 auto;
 	}
-	
+
 </style>
 <div class="headerImage"></div>
 

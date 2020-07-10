@@ -18,9 +18,9 @@ background-position: right center;
         display:flex;
         flex-direction: row;        
         font-weight:500;    
-        justify-content: left;
+        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
-        margin-left:15vw;
     }
 
     .footer {

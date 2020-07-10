@@ -10,11 +10,18 @@
 
 <style>
 	.person {
-		max-width:30%;
-		display:flex;
-        flex-direction:row;
+		min-width:240px;
         margin:20px 0px;
         flex-wrap: wrap;
+        flex-basis:30%;
+        display: flex;
+        flex-direction: row;
+        font-weight: 500;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        min-width:120px;
     }
     .person .name {
         font-size:1.4em;

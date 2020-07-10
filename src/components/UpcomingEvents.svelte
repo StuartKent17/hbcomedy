@@ -10,6 +10,7 @@
     max-width:80vw;
     padding:190px 20px;
     display:flex;      
+    flex-wrap: wrap;
     position: relative; 
     justify-content: space-evenly;
 }

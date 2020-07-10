@@ -12,10 +12,13 @@
 
 <style>
 	.person {
-		max-width:45%;
 		display:flex;
         flex-direction:row;
         margin:20px 0px;
+        flex:1 0 auto;
+        flex-wrap: wrap;
+        flex-basis:50%;
+        min-width:390px;
     }
     .person .name {
         font-size:1.4em;
@@ -34,7 +37,7 @@
 		margin:0px;
 	} 
 	.person .attributes li {
-		font-size:.8em;
+		font-size:.6em;
 		padding:.4em .75em;
 		background:darkslategray;
 		color:white;
