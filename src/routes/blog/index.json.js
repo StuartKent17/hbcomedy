@@ -1,8 +1,6 @@
 import posts from './_posts.js';
 
-import moment from 'moment';
 const contents = JSON.stringify(posts.map(post => {
-	console.log(moment());
 	return {
 		title: post.title,
 		slug: post.slug

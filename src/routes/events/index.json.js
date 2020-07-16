@@ -9,14 +9,18 @@ const contents = JSON.stringify(events.map(event => {
 		}
 	});
 
+	
 	var nextDate = only_future.sort(function(a,b) {
 		return moment(a.datetime).diff(b.datetime);
 	});
 
+
 	return {
 		title: event.title,
 		slug: event.slug,
-		date: nextDate[0],
+		nextDate: nextDate[0] ? nextDate[0] : null,
+		lastDate: nextDate[0] ? null : event.dates.pop(),
+		isFeature: nextDate[0] ? nextDate[0].isFeature : null,
 		image: event.event_image
 	};
 }));
