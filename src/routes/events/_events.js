@@ -30,7 +30,13 @@ const events = [
 				datetime:'2020-08-20 20:00',
 				isFeature: true,
 				eventurl: '#'
-			}				
+			},
+			{
+				name:"Gary Sansome Workshop",
+				datetime:'2020-08-20 20:00',
+				dateUnconfirmed:true,
+				eventurl: '#'
+			}								
 		],
 		location: "Hastings",
 		region: "Hawke's Bay",

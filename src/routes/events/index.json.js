@@ -21,6 +21,7 @@ const contents = JSON.stringify(events.map(event => {
 		nextDate: nextDate[0] ? nextDate[0] : null,
 		lastDate: nextDate[0] ? null : event.dates.pop(),
 		isFeature: nextDate[0] ? nextDate[0].isFeature : null,
+		dateUnconfirmed: nextDate[0] ? nextDate[0].dateUnconfirmed : null,
 		image: event.event_image
 	};
 }));

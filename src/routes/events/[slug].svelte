@@ -130,6 +130,12 @@
 			{date.name}
 		</h4>
 		<div class="row">
+			{#if date.dateUnconfirmed}
+				<span> Date Not Confirmed </span>
+				<div class="date_long">
+					{moment(date.datetime).format('MMMM YYYY')}
+				</div>
+			{:else}
 			<div class="date_long">
 				{moment(date.datetime).format('dddd, MMMM Do YYYY')}
 			</div>
@@ -139,6 +145,7 @@
 			<div class="fromNow">
 				{moment(date.datetime).fromNow()}
 			</div>
+			{/if}
 		</div>
 		{#if date.eventurl}
 		<div class="row">

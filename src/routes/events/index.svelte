@@ -108,11 +108,15 @@
 				<h3>
 					{event.title}
 				</h3>
+				{#if event.dateUnconfirmed}
+					<span> Date TBA </span>
+				{:else}
 					{moment(event.nextDate.datetime).format("ddd, MMMM Do YYYY, h:mm a")}
 					<br/>
 					<div class="fromnow">
 					  {moment(event.nextDate.datetime).fromNow()}
 					</div>
+				{/if}
 				</div>
 			</div>
 		</a>
