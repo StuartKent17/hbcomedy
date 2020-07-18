@@ -15,19 +15,23 @@
 
 <script>
 	export let event;
+	import venues from './_venues.js';
 	import moment from 'moment';	
-    import Button from '../../components/Button.svelte';    
-		var newEvents = event.dates.filter(function(date, index, array){
-			if(moment(date.datetime).isAfter(moment())){
-				return true;
-			}
-		});
+	import Button from '../../components/Button.svelte'; 
+	
+	const venue = venues[event.venue]; 
+	
+	var newEvents = event.dates.filter(function(date, index, array){
+		if(moment(date.datetime).isAfter(moment())){
+			return true;
+		}
+	});
 
-		var oldEvents = event.dates.filter(function(date, index, array){
-			if(moment(date.datetime).isBefore(moment())){
-				return true;
-			}
-		});
+	var oldEvents = event.dates.filter(function(date, index, array){
+		if(moment(date.datetime).isBefore(moment())){
+			return true;
+		}
+	});
 </script>
 
 <style>
@@ -162,19 +166,19 @@
 <div class="tall-row">
 	<div class="tall-row">
 	<h2>About the Venue</h2>
-	<h3>{event.venue}</h3>	
-	{@html event.venue_about}	
+	<h3>{venue.name}</h3>	
+	{@html venue.about_html}	
 	<Button
-	title="{event.venue} Website"
-	url="{event.venue_url}"
+	title="{venue.name} Website"
+	url="{venue.venue_url}"
 	></Button>
 	<Button clazz="facebook"
 	title="facebook"
-	url="{event.venue_facebook}"
+	url="{venue.facebook}"
 	></Button>
 </div>
 <div class="venue_vid">
-	<video id="venue_vid" src="{event.venue_video}" loop muted type="video/mp4" alt="" autoplay>
+	<video id="venue_vid" src="{venue.video}" loop muted type="video/mp4" alt="" autoplay>
 	</div>
 		</div>
 		{#if oldEvents.length > 0}

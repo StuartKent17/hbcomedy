@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
+import globImport from "rollup-plugin-glob-import"
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
@@ -64,6 +65,7 @@ export default {
 		input: config.server.input(),
 		output: config.server.output(),
 		plugins: [
+			globImport({format:'default'}),
 			replace({
 				'process.browser': false,
 				'process.env.NODE_ENV': JSON.stringify(mode)

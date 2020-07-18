@@ -1,4 +1,9 @@
-import events from './_events.js';
+import * as eventsList from './events/*.js';
+
+let events = [];
+for (const [key, value] of Object.entries(eventsList)) {
+	events = events.concat(value);
+}
 
 const lookup = new Map();
 events.forEach(event => {

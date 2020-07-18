@@ -1,5 +1,12 @@
-import events from './_events.js';
+import * as eventsList from './events/*.js';
 import moment from 'moment';
+
+
+
+let events = [];
+for (const [key, value] of Object.entries(eventsList)) {
+	events = events.concat(value);
+}
 
 const contents = JSON.stringify(events.map(event => {
 

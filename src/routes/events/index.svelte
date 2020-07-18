@@ -12,8 +12,8 @@
 	export let events;
 
 	events = events.sort(function(a,b) {
-		if(b.isFeature) {
-			return true;
+		if(a.isFeature) {
+			return -1;
 		}
 		return moment(a.datetime).diff(b.datetime);
 	});
@@ -51,7 +51,9 @@
 		width:100%;
 		min-width:100%;		
 		font-size:2.4em;
-		margin:0px;
+		margin:20px 0px;
+		border-radius:15px;
+		overflow: hidden;
 	}
 	a.feature .eventchit {
 		position: relative;
