@@ -1,14 +1,17 @@
+<script>
+    export let poster, url, slug, title, description, background ="";
+</script>
 <style>
 .container {
-    background:darkslategray url('../bricksbg.jpg');
     color:white;
     font-size:1.4em;
     position: relative; 
+    background:black;
 }
 .content {
     margin:0px auto;
     max-width:80vw;
-    padding:190px 20px;
+    padding:240px 120px;    
     display:flex;      
     flex-wrap: wrap;
     position: relative; 
@@ -18,8 +21,11 @@
     background: rgba(0,0,0,.5);
     position: absolute;
     width:100%;
+    filter:blur(5px);
     height:100%;
+    background-size:cover;
     z-index:0;
+    opacity:.5
 }
 .poster {
     max-width:280px;
@@ -50,16 +56,18 @@
 }
 </style>
 <div class="container">
-<div class="bg"></div>    
+<div class="bg" style="background-image:url('{background}')"></div>    
 <div class="content">
     <div class="poster">
-        <img src="poster.jpg" alt="">
+        <img src="{poster}" alt="">
     </div>
     <div class="details">
         <div class="preheader">Tickets available now!</div>
-        <h2>THE MAN</h2>
-        <p>Set at speakers corner in Londons Hyde park The Man is a minimalist solo show that uses a mashup of standup comedy and Brectian style theatrics to explore the idea of a modern jester holding court to his fellow citizens with dark and playful wit.
-        </p>
+        <h2>{title}</h2>
+        <p>{@html description}        </p> 
+        <a href="events/{slug}">
+            <div class="preheader">Find out more</div>
+        </a>
     </div>
 </div>
 </div>

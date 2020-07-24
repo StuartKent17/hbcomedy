@@ -10,28 +10,32 @@
 const events = [
 	{
 		title: 'Gary Sansome',
-		url: '',
+		url: 'https://www.facebook.com/events/591124124938983/',
 		event_image: 'gary_sansome.jpg',
-		venue: 'tba',
+		poster: 'sansome_poster.jpg',
+		venue: 'paisley',
 		dates: [
 			{
-				name:"Gary Sansome Live",
+				name:"Gary Sansome - Bald Man Sings Rhianna",
 				datetime:'2020-08-20 20:00',
 				isFeature: true,
-				eventurl: '#'
+				poster: 'sansome_poster.jpg',
+				eventurl: 'https://www.facebook.com/events/591124124938983/'
 			},
 			{
 				name:"Gary Sansome Workshop",
 				datetime:'2020-08-20 20:00',
 				dateUnconfirmed:true,
-				eventurl: '#'
+				eventurl: ''
 			}								
 		],
 		slug: 'gary-sansome',
 		html: `
-			<p>Standup comedy is a great way to practice your stuff, enjoy breakout comedy acts, meet new people and support local businesses.</p>
+			<p>Gary Sansome returns for a solo show after the great reception he had through Laughs Outta Lockdown in June. Don't miss out on this awesome Scotsman.</p>
+			<p>MC CJ Alexander &Support Act Karen Leslie</p>
+			<strong>$20 on the door or through eventfinda.</strong>
+			<br/>
 
-			<p>If you want to perform, call or text Karen on 027 7596481 to reserve a slot, or ask for Karen on the night.</p>
 		`
 	}
 ];

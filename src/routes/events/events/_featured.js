@@ -18,6 +18,7 @@ const events = [
 			{
 				name:"The Man 2019",
 				datetime:'2019-08-09 20:00',
+				poster: "the_man_poster.jpg",
 				eventurl: '#'
 			}					
 		],

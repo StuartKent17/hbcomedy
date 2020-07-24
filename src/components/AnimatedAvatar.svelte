@@ -53,8 +53,7 @@
   width:80px;
   height:80px;
 }
-
-.avatar .emoji {
+ .emoji {
   position:absolute;
   transform:scale(1);
   transition:transform 64s ease;

@@ -10,7 +10,7 @@
 const events = [
 	
 	{
-		title: 'Hastings Standup Comedy',
+		title: 'Open Mic Comedy @ The Common Room',
 		url: '',
 		event_image: 'comedyclub.jpg',
 		cost: 'Free Entry',
@@ -19,11 +19,13 @@ const events = [
 			{
 				name:"Hastings Standup - July",
 				datetime:'2020-07-21 20:00',
+				poster: 'july_poster.jpg',
 				eventurl: '#'
 			},
 			{
 				name:"Hastings Standup - August",
 				datetime:'2020-08-11 20:00',
+				poster: 'july_poster.jpg',
 				eventurl: ''
 			},
 			{
@@ -47,19 +49,34 @@ const events = [
 		cost: 'Koha Entry',
 		dates: [
 			{
-				name:"Napier Standup - July",
+				name:"Open Mic Comedy at Paisley - July",
 				datetime:'2020-07-02 20:00',
 				eventurl: '#'
 			},
 			{
-				name:"Napier Standup - August",
-				datetime:'2020-08-06 20:00',
-				eventurl: ''
+				name:"Open Mic Comedy at Paisley",
+				datetime:'2020-08-05 19:30',
+				eventurl: 'https://www.facebook.com/events/303897887480598/?event_time_id=303897890813931'
 			},
 			{
-				name:"Napier Standup - September",
-				datetime:'2020-09-03 20:00',
-				eventurl: ''
+				name:"(Now Thursdays!) Open Mic Comedy at Paisley",
+				datetime:'2020-09-03 19:30',
+				eventurl: 'https://www.facebook.com/events/303897887480598/?event_time_id=303897900813930'
+			},
+			{
+				name:"Open Mic Comedy at Paisley",
+				datetime:'2020-10-01 19:30',
+				eventurl: 'https://www.facebook.com/events/303897887480598/?event_time_id=303897904147263'
+			},
+			{
+				name:"Open Mic Comedy at Paisley",
+				datetime:'2020-11-05 19:30',
+				eventurl: 'https://www.facebook.com/events/303897887480598/?event_time_id=303897897480597'
+			},	
+			{
+				name:"Open Mic Comedy at Paisley",
+				datetime:'2020-12-03 19:30',
+				eventurl: 'https://www.facebook.com/events/303897887480598/?event_time_id=303897894147264'
 			},						
 		],
 		slug: 'napier-standup-comedy',

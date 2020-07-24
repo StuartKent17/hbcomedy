@@ -26,6 +26,7 @@ const contents = JSON.stringify(events.map(event => {
 		title: event.title,
 		slug: event.slug,
 		nextDate: nextDate[0] ? nextDate[0] : null,
+		venue: event.venue,
 		lastDate: nextDate[0] ? null : event.dates.pop(),
 		isFeature: nextDate[0] ? nextDate[0].isFeature : null,
 		dateUnconfirmed: nextDate[0] ? nextDate[0].dateUnconfirmed : null,

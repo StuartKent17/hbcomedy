@@ -11,16 +11,30 @@
 		color:white;
 		border-radius:2px;
 		display: inline-block;
-		font-size:14px;
+		font-size:14px;				
 	}
+	.flogo{
+		width:19px;
+		display: none;
+		vertical-align: middle;
+		margin-top:-4px;
+		margin-right:2px;
+	}
+
 
 	.facebook {
 		background:#3b5998 ;
 	}
+
+	.facebook .flogo {
+		display:inline-block;
+	}
+
 </style>
 
 <a href="{url}" class="{clazz}">
     <div class="button {clazz}">
-        {title}
+	<img src="f_logo_RGB-White_58.png" alt="" class="flogo">
+	{title}
     </div>
 </a>

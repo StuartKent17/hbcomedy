@@ -7,7 +7,6 @@
     export let posttitle= "";
     export let paragraph= "";
     export let attributes= "";
-    export let size; 
 </script>
 
 <style>

@@ -30,15 +30,16 @@
 			align-content: space-between;
 		}
 		.events a {
-		flex: 1 0 33%;
+		flex: 1 0 50%;
 		margin: 5px;
 		text-decoration: none;
-		min-width: 329px;
+		min-width: 329px; 
 	}
 	.eventchit {
 		border: 1px solid rgb(225,225,225);
 		border-radius:4px;
 		padding:20px;
+		position: relative;
 	}
 	.image {
 		height:210px;
@@ -53,7 +54,6 @@
 		font-size:2.4em;
 		margin:20px 0px;
 		border-radius:15px;
-		overflow: hidden;
 	}
 	a.feature .eventchit {
 		position: relative;
@@ -65,13 +65,14 @@
 		min-height:400px;
 		padding:0px;
 		border:0px;
+		flex:0 0 50%;
 	}
 	.feature .image {
 		position:absolute;
 		width:100%;
 		height:100%;
 		background-size:cover;
-	}
+	} 
 	.feature .row {
 		color:White;
 		flex: 1 0 60%;
@@ -82,6 +83,42 @@
 	}
 	.feature .row .fromnow {
 		display: none;
+	}
+	.eventchit h3 {
+		max-width:50%;
+	}
+	.eventchit .poster {
+		position:absolute; 
+		max-width:200px;
+		box-shadow:0px 0px 20px rgba(0,0,0,.25);
+		min-width:50px;
+		right:35px;
+		bottom:25px;
+		transform: rotate(9deg);
+	}
+	.feature .eventchit .poster {
+		position:absolute; 
+		max-width:30%;
+		box-shadow:0px 0px 20px rgba(0,0,0,.25);
+		min-width:50px;
+		left:35px;
+		bottom:-25px;
+		transform: rotate(9deg);
+	}
+	@media screen and (min-width:1024px) {
+		.events a {
+			max-width:49%;
+		}
+	}
+	@media screen and (max-width:610px) {
+		.eventchit .poster {
+			bottom:auto;
+			top:5%;
+			right:auto;
+			left:5%;
+			transform:rotate(0);
+			max-width: 150px;
+		}
 	}
 </style>
 
@@ -105,11 +142,15 @@
 				<div class="image" 
 					style="background-image: url('./{event.image}')">
 				</div>
-				<div class="row">
+				<div class="row eventdetails">
+					{#if event.nextDate.poster}
+						<img src="{event.nextDate.poster}" alt="" class="poster">
+					{/if}
 					<br/>
 				<h3>
 					{event.title}
 				</h3>
+			<!--	<p>{event.venue}</p>-->
 				{#if event.dateUnconfirmed}
 					<span> Date TBA </span>
 				{:else}
@@ -142,6 +183,9 @@
 					style="background-image: url('./{event.image}')">
 				</div>
 				<div class="row">
+					{#if event.lastDate.poster}
+						<img src="{event.lastDate.poster}" alt="" class="poster">
+					{/if}
 					<br/>
 				<h3>
 					{event.title}

@@ -1,20 +1,18 @@
 <script>
 	import Hero from '../components/Hero.svelte';
 	import UpcomingEvents from '../components/UpcomingEvents.svelte';
+	import gary from './events/events/_gary.js';
+	import events from './events/events/_events.js';
+
+	var featured = gary[0];
 </script>
 
 <style>
-	h1, figure, p {
+	figure {
 		text-align: center;
 		margin: 0 auto;
 	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+ 
 
 	figure {
 		margin: 0 0 1em 0;
@@ -24,27 +22,20 @@
 		width: 100%;
 		max-width: 400px;
 		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
- 
+	} 
 
 	.purple-block {
-		background:#57002C;
+		background:  linear-gradient(to bottom, rgba(56, 62, 97, 0.762), rgba(117, 19, 93, 0.89)),
+    url('../gold_leaf.jpg');
 		color:white;
+		padding-top:140px;
+		padding-bottom:140px;
 		padding-left:15vw;
 		padding-right:15vw;
 		justify-content: space-between;
 		position:relative
 	}
-
-	.teeth,
-	.tongue {
-		display: block;
-		margin:auto;
-	}
+ 
 	.events {
 		display: flex;
 		flex-direction: row;
@@ -116,11 +107,17 @@
 </svelte:head>
 
 <Hero></Hero>
-<UpcomingEvents></UpcomingEvents>
+<UpcomingEvents
+	poster="{featured.poster}"
+	url ="{featured.url}"
+	background="{featured.event_image}"
+	title="{featured.title}"
+	description="{featured.html}"
+	slug="{featured.slug}"
+></UpcomingEvents>
 
 <figure class="purple-block">
-		<img src="teeth.png" alt="" class="teeth">
-		<img src="openmic.png" alt="" class="openmic">
+		<img src="big_open_mic.png" alt="" class="openmic">
 		
 	<div class="events">
 		<a href="events/napier-standup-comedy">
@@ -144,6 +141,5 @@
 		</div>
 		</a>
 	</div>
-	<img src="tongue.png" alt="" class="tongue">
 </figure>
  

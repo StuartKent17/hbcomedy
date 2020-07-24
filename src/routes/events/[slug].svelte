@@ -114,6 +114,15 @@
 	.venue_vid video {
 		width:100%;
 	}
+	.datechit {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.datechit .poster {
+		max-width:90px;
+		padding:10px 20px 10px 10px;
+	}
 </style>
 
 <svelte:head>
@@ -130,6 +139,10 @@
 	<div class="row datechits">
 	{#each newEvents as date}
 	<div class="datechit">
+		{#if date.poster}
+			<img src="{date.poster}" alt="" class="poster">
+		{/if}
+		<div class="details">
 		<h4>
 			{date.name}
 		</h4>
@@ -152,16 +165,17 @@
 			{/if}
 		</div>
 		{#if date.eventurl}
-		<div class="row">
-
+		<div class="button row"> 
+			<Button
+			title="Event Info"
+			url="{date.eventurl}"
+			clazz="{date.eventurl.indexOf('facebook')!= -1 ? 'facebook':''}"
+			></Button>
 		</div>
 		{/if}
 	</div>
-	{/each}
-
-	<div class="prior-events">
-
 	</div>
+	{/each}
 </div>
 <div class="tall-row">
 	<div class="tall-row">
@@ -186,6 +200,10 @@
 		<div class="row datechits">
 		{#each oldEvents as date}
 		<div class="datechit">
+			{#if date.poster}
+				<img src="{date.poster}" alt="" class="poster">
+			{/if}
+			<div class="details">
 			<h4>
 				{date.name}
 			</h4>
@@ -202,13 +220,15 @@
 			</div>
 			{#if date.eventurl}
 			<div class="row">
-				<a href="#">
+				<a href="{date.eventurl}">
 					<div class="button">
 						Event Info
 					</div>
 				</a>
 			</div>
 			{/if}
+			</div>
+
 		</div>
 		{/each}
 	

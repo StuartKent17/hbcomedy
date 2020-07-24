@@ -29,12 +29,7 @@
     }
 	.person .details {
 		flex:1;
-    }
-    .posttitle {
-        margin-top:-15px;
-        font-size:.7em;
-        text-emphasis: italic;
-    }
+    }  
 	.person .attributes {
 		padding:0px;
         margin:0px;
